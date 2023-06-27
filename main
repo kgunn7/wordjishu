@@ -1,0 +1,23 @@
+def count_words(text):
+    words = text.split()
+    return len(words)
+
+print("单词计数器命令行工具")
+
+while True:
+    print("\n请选择操作：")
+    print("1. 统计单词数量")
+    print("2. 退出程序")
+
+    choice = input("请选择操作（输入数字）：")
+
+    if choice == '2':
+        print("谢谢使用，再见！")
+        break
+
+    if choice == '1':
+        text = input("请输入文本：")
+        word_count = count_words(text)
+        print("单词数量：", word_count)
+    else:
+        print("无效的选择，请重新输入。")
